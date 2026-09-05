@@ -180,3 +180,9 @@ meson test nanoarrow:  # default test run
 meson test nanoarrow: --wrap valgrind  # run tests under valgrind
 meson test nanoarrow: --benchmark --verbose # run benchmarks
 ```
+  bindings both have an installed size of ~1 MB. The Kotoba bindings are a tiny
+  in-language Arrow IPC / schema subset (empty schema and int32 array header)
+  because Kotoba cannot FFI libarrow.
+  nanoarrow.h) and its R and Python bindings have zero dependencies. The Kotoba
+  tree is a single `.kotoba` compilation unit.
+- [Getting started in Kotoba](kotoba/README.md)
